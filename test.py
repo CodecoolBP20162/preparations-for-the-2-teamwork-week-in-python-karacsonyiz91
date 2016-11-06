@@ -1,25 +1,21 @@
 import unittest
 
-# Here's our "unit".
-
 
 def IsOdd(n):
-    return
+    return bool(n & 1)
 
-# Here's our "unit tests".
-
+print (IsOdd(12))
 
 class IsOddTests(unittest.TestCase):
 
     def testOne(self):
-        self.failUnless(IsOdd(1))
+        self.assertTrue(IsOdd(1))
 
     def testTwo(self):
-        self.failIf(IsOdd(2))
+        self.assertFalse(IsOdd(2))
 
-
-def main():
+def main(): 
     unittest.main()
 
 if __name__ == '__main__':
-    main()
+    main()      
